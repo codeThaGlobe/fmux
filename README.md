@@ -1,5 +1,6 @@
-#UX / UI Project
+# UX / UI Project
 
+## Uses this frontend framework for scaffolding and dependency management
 
 
 
