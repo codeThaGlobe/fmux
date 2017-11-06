@@ -1,13 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Questrial");
-/* TODO 
-
-- IMPORT FOMT 
-
-
-*/
 body { padding-top: 50px; background-color: #f5f5f5; font-family: Questrial-Regular; text-align: center; font-size: 16px; }
+@media screen and (min-width: 768px) { body { text-align: left; } }
 
-h1 { font-size: 3em; line-height: 56px; }
+h1 { font-size: 3em; line-height: 56px; text-align: center; }
 
 h2 { font-size: 2em; color: #494949; }
 
@@ -16,29 +11,36 @@ h3 { font-size: 1.5em; color: #ff9f00; }
 h4 { margin-bottom: 30px; }
 
 p { font-size: 18px; color: #8B8B8B; line-height: 27px; }
+p.lead { max-width: 80%; margin: 0 auto 40px; }
 
 .small { font-size: 14px; }
 
 a, a:hover, a:active { text-decoration: none; }
+
+.btn-wrapper { width: 100%; text-align: center; }
 
 .btn-secondary { background-color: #0d9d97; color: #fff; text-transform: capitalize; border: none; border-radius: 5px; font-size: 16px; height: 42px; padding-left: 30px; padding-right: 30px; }
 
 .navbar { background: #FFF; }
 .navbar .navbar-brand img { width: 110px; height: auto; }
 
-.content-wrapper { padding: 50px 0; }
+.content-wrapper { padding: 50px 0; max-width: 750px; margin: 0 auto; }
+.content-wrapper .intro { text-align: center; }
 
 .well { background-color: #FFF; margin-bottom: 40px; }
-.well .add-month { padding: 20px; }
+.well .add-month { padding: 20px; text-align: center; }
 .well .add-month h4 { margin-bottom: 0; }
 
 form { color: #8B8B8B; }
 form .form-group { margin-bottom: 20px; }
 form .form-group:last-of-type { margin-bottom: 0; }
 
+.bootstrap-datetimepicker-widget td.disabled, .bootstrap-datetimepicker-widget td.disabled:hover { color: #dbdbdb !important; }
+.bootstrap-datetimepicker-widget .picker-switch a { display: none; }
+
 a .fa { font-size: 2em; color: #D2D2D2; }
 
-footer { background-color: #4A4A4A; padding: 30px 0; color: #9A9A9A; }
+footer { background-color: #4A4A4A; padding: 30px 0; color: #9A9A9A; text-align: center; }
 footer p, footer a { font-size: 0.87em; }
 footer a { color: #9A9A9A; margin-bottom: 10px; display: inline-block; }
 footer a:first-of-type { margin-right: 10px; }

@@ -13,6 +13,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Fundomate theme -->
     <link href="css/styles.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/css/bootstrap-datetimepicker.min.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -37,15 +38,25 @@
     </div>
     <div class="container">
         <div class="content-wrapper">
-            <h3>Funding Application</h3>
-            <p class="lead">Just a heads up, we’ll need at least 6 months earnings showing 10% growth month-to-month.</p>
+            <div class="intro">
+                <h3>Funding Application</h3>
+                <p class="lead">Just a heads up, we’ll need at least 6 months earnings showing 10% growth month-to-month.</p>
+            </div>
             <div class="well">
                 <form id="funding-application">
-                    <h4>Start Date</h4>
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                    <h3>Start Date</h3>
+                    <div>
+                        <div class="form-group">
+                            <div class="input-group date" id="datetimepicker1">
+                                <input type="text" class="form-control" />
+                                <span class="input-group-addon">
+                    <span class="fa fa-calendar">
+                    </span>
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                    <h4>Earnings</h4>
+                    <h3>Earnings</h3>
                     <div class="form-group">
                         <label class="sr-only" for="month-1">Amount (in dollars)</label>
                         <label for="month-1">Month 1</label>
@@ -103,7 +114,9 @@
                 </div>
             </div>
             <!-- ./well -->
-             <button type="submit" class="btn btn-secondary">Next</button>
+            <div class="btn-wrapper">
+                <button type="submit" class="btn btn-secondary">Next</button>
+            </div>
         </div>
     </div>
     <footer>
@@ -117,9 +130,27 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/e1fb75b91f.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/js/bootstrap-datetimepicker.min.js"></script>
+    <script>
+    $(function() {
+        $('#datetimepicker1').datetimepicker({
+            icons: {
+                time: "fa fa-clock-o",
+                date: "fa fa-calendar",
+                up: "fa fa-arrow-up",
+                down: "fa fa-arrow-down"
+            },
+            format: 'MM-DD-YYYY',
+            useCurrent: true,
+            /*defaultDate: moment().subtract(6, 'months'),*/
+            maxDate: moment().format('MM DD YYYY')
+        });
+    });
+    </script>
 </body>
 
 </html>
